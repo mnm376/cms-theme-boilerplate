@@ -1,0 +1,40 @@
+.moh-pricing-module {
+  font-family: GT America;
+  text-align: center;
+}
+
+.moh-pricing-module_container {
+  margin: 3rem auto 1.5rem;
+  padding: 0 1.5rem;
+  max-width: 28.75rem;
+}
+
+.moh-pricing-module_title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+  padding-bottom: .5rem;
+}
+
+.moh-pricing-module_subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+@media (min-width: 48rem) {
+  .moh-pricing-module_container {
+    padding: 0;
+    margin: 6rem auto 3rem;
+/*     padding: 3rem 0; */
+  }
+  .moh-pricing-module_title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .moh-pricing-module_subtitle {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
