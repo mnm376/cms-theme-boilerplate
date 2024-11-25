@@ -1,156 +1,158 @@
-.card {
-  text-align: center;
-}
-.card--pricing {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-  padding: 2.1rem;
-}
-
-@media screen and (max-width: 1200px) {
-  .card--pricing {
-    padding: 2.1rem 0.7rem;
-  }
+.moh-card_container {
+  margin: 0 1.5rem 2rem;
+  padding: calc(1.5rem - .0625rem); /* subtracting border size */
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: .0625rem solid #C7C7C7;
+  border-radius: .5rem;
 }
 
-@media screen and (max-width: 787px) {
-  .card--pricing {
-    margin-bottom: 1.4rem;
-  }
+.moh-card--hr {
+  margin: 1.5rem 0;
 }
 
-.card__subtitle,
-.card__body li {
-  font-size: 0.9rem;
+.moh-card_icon {
+  width: 6rem;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
-.card__body ul,
-.card__body li {
+.moh-card_product {
+  display: flex;
+  flex-direction: column;
+}
+
+.moh-card_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: .5rem;
+}
+
+.moh-card_description {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+.moh-card_price {
+  margin-top: auto;
+}
+
+.moh-card_price-number {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: .25rem;
+}
+
+.moh-card_price-frequency {
+  color: #666D96;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  margin-bottom: 1.5rem;
+}
+
+.moh-card_price-button {
+  background: #1D6AE5;
+  height: 3rem;
+  width: 100%;
+  padding: 0;
+  border-radius: .25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.moh-card_price-button.active {
+  background: #ffffff;
+  color:  #212121;
+}
+
+.moh-card_features {
   padding: 0;
 }
 
-.card__body li {
+.moh-card_feature-item {
+  margin: 0 0 .75rem;
   list-style: none;
-  margin: 0;
-  padding: 0.35rem 0;
-  text-align: left;
+  padding: 0 0 0 1.875rem;
+  background-image: url("https://47980142.fs1.hubspotusercontent-na1.net/hubfs/47980142/raw_assets/public/cms-theme-boilerplate/src/images/module-icons/pricing-card/checkmark-circle-filled.svg"); /* Path to your image */
+  background-size: 1.375rem;
+  background-repeat: no-repeat;
+  background-position: left top;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
-.card__body svg {
-  display: inline-block;
-  margin-right: 0.7rem;
-  max-width: 20px;
+.moh-card_footnote {
+  color: #666D96;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  margin-top: .75rem;
 }
 
-/* Overlay */
+/* Grid Layout */
+.row-number-3 {
+  .row-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
 
-.card__overlay-background {
-  position: fixed;
-
-  /* One less than the overlay z-index value */
-  z-index: 999999;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  background: rgba(0, 0, 0, 0.2);
-  inset: 0;
-  opacity: 0;
-  transition: opacity 500ms ease 0s, visibility 500ms ease 0s;
-  visibility: hidden;
-}
-
-.card__overlay-background.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Overlay */
-
-html.card__payments--overlay-open {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-}
-
-.card__overlay {
-  position: fixed;
-
-  /* Well below the maximum value, but high enough to cover most cases */
-  z-index: 1000000;
-  top: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: calc(100% - 50px);
-  width: 100vw;
-  background-color: #fff;
-  transform: translateY(0);
-  transition: transform 500ms ease 0s, visibility 500ms ease 0s;
-  visibility: hidden;
-}
-
-.card__overlay.open {
-  transform: translateY(-100%);
-  transition: transform 500ms ease 0s, visibility 500ms ease 0s;
-  visibility: visible;
-}
-
-button.card__overlay-close--top {
-  position: absolute;
-  top: -40px;
-  right: 16px;
-  display: flex;
-  height: 30px;
-  width: 30px;
-  padding: 5px;
-  border: none;
-  border-radius: 50%;
-  align-items: center;
-  background: #fff;
-  outline-color: #33475b;
-}
-
-button.card__overlay-close--top svg {
-  fill: #7c98b6;
-}
-
-button.card__overlay-close--top:hover svg,
-button.card__overlay-close--top:focus svg {
-  fill: #33475b;
-}
-
-@media screen and (min-width: 768px) {
-  button.card__overlay-close--top {
-    top: 16px;
-    right: 16px;
-    background: transparent;
+  .dnd-module {
+    flex: 1 1 auto;
+    max-width: 100%;
   }
 }
 
-button.card__overlay-close--bottom {
-  position: absolute;
-  top: initial;
-  right: 16px;
-  bottom: 16px;
-  padding: 5px;
-  border: none;
-  background: none;
-  color: #33475b;
-  font-size: 14px;
-  font-weight: normal;
-  opacity: 0;
-  outline-color: #33475b;
+@media (min-width: 48rem) {
+  .row-number-2 {
+    .row-fluid {
+      gap: 2rem;
+    }
+    .dnd-column {
+      padding: 0;
+    }
+  }
+
+  .row-number-3 {
+    .dnd-module {
+      /*flex-basis: calc(50% - 0.5rem);*/
+      width: fit-content;
+    }
+    .hs_cos_wrapper_type_module, .moh-card--pricing {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .moh-card_container {
+    max-width: 22.75rem;
+    margin: 0;
+    height: 100%;
+  }
+
+  .moh-card_features {
+    margin: 0;
+  }
 }
 
-button.card__overlay-close--bottom:focus {
-  opacity: 1;
+@media (min-width: 60.25rem) {
+  .row-number-2 {
+    .dnd-column {
+      margin: 0 6.375rem;
+    }
+  }
 }
 
-.card__overlay .payments-iframe-container {
-  height: 100%;
-  width: 100%;
+@media (min-width: 64rem) {
+  .row-number-3 .dnd-module {
+    max-width: 18rem;
+    /*flex-basis: calc(25% - 0.75rem);*/
+    flex: 1 1 calc(25% - 1.5rem)
+  }
 }
-
-.card__overlay .payments-iframe-container iframe {
-  height: 100% !important; /* stylelint-disable-line declaration-no-important */
-}
-
 
