@@ -9,10 +9,10 @@
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "autoprefixer": "^9.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^v8.0.0",
     "js-yaml": "^3.14.0",
-    "postcss-cli": "^7.0.0",
+    "postcss-cli": "^11.0.0",
     "prettier": "^2.1.2"
   },
   "scripts": {
@@ -24,5 +24,8 @@
   "browserslist": [
     "defaults",
     "IE 11"
-  ]
+  ],
+  "dependencies": {
+    "hs": "^2.0.1"
+  }
 }
