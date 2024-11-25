@@ -118,7 +118,7 @@
         "max": 2500,
         "min": 900,
         "suffix": "px",
-        "default": 1240
+        "default": 1440
       }
     ]
   },
