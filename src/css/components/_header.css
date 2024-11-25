@@ -1,11 +1,12 @@
 /* Header DND sections */
 
 .header .dnd-section {
-  padding: 0;
+/*   padding: 0; */
+  display: none !important;
 }
 
 /* Header container */
-
+/*
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -50,7 +51,7 @@
 }
 
 /* Navigation skipper */
-
+/*
 .header__skip {
   height: 1px;
   left: -1000px;
@@ -72,7 +73,7 @@
 }
 
 /* Logo */
-
+/*
 .header__logo {
   align-items: center;
   display: flex;
@@ -103,7 +104,7 @@
 }
 
 /* Search bar */
-
+/*
 .header__search {
   padding: 0 1rem;
   width: auto;
@@ -206,7 +207,7 @@
 }
 
 /* Language switcher */
-
+/*
 .header__language-switcher {
   cursor: pointer;
   padding-right: 1.4rem;
@@ -340,6 +341,7 @@
 
   {%- if get_asset_version('@hubspot/language_switcher') == 1 %}
     /* V1 lang switcher updates to keep "in line" w/ v0 mobile styles */
+/*
     .header__language-switcher .hs-language-switcher__menu {
         display: block;
         box-shadow:none!important;
@@ -355,13 +357,13 @@
 }
 
 /* Navigation */
-
+/*
 #nav-toggle {
   display: none;
 }
 
 /* Mobile toggles */
-
+/*
 @media (max-width: 767px) {
   .header__navigation,
   .header__search,
@@ -472,3 +474,4 @@
     display: block;
   }
 }
+ */
