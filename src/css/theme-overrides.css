@@ -178,6 +178,13 @@ body {
   {{ body_font.style }};
   color: {{ body_font.color }};
   font-size: {{ body_font.size ~ body_font.size_unit }};
+  background: {{ secondary_color }};
+
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
 }
 
 /* Paragraphs */
